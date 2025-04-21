@@ -5,6 +5,10 @@ Sample files are stored in the `/param` directory.
 
 ## Usage
 
+Download Savile Row Here: https://www-users.york.ac.uk/peter.nightingale/savilerow/index.html
+
+## Usage
+
 ```bash
 python factorio_opt.py --param [path to param file] (--max-recipes [n]) (--max-bpp [n]) (--keep-files) (--save-log)
 
