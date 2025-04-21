@@ -1,0 +1,12 @@
+language ESSENCE' 1.0
+letting assembler_layout be [[0, 0, 0], 
+[0, 0, 0], 
+[1, 0, 0], 
+[0, 0, 0], 
+[0, 0, 0]]
+letting inserter_layout be [[0, 0, 0], 
+[2, 2, 2], 
+[0, 0, 0], 
+[0, 0, 0], 
+[0, 0, 0]]
+letting positions be [7]

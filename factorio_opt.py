@@ -26,29 +26,29 @@ def main(args):
         elif failed_at == Stages.BinPacking or failed_at is None:        
             dvars, failed_at = run_recipes(dvars)
 
-        elif failed_at == Stages.Layout:
-            dvars, failed_at = run_bin_packing(dvars)
+        # elif failed_at == Stages.Layout:
+        #     dvars, failed_at = run_bin_packing(dvars)
 
-        # If no stages failed, a solution has been found
-        if failed_at is None:
-            # Visualise and save to a png file
-            img = renderer.render_layout(dvars["layout"])
-            path = str(Config.CWD / "solution.png")
+        # # If no stages failed, a solution has been found
+        # if failed_at is None:
+        #     # Visualise and save to a png file
+        #     img = renderer.render_layout(dvars["layout"])
+        #     path = str(Config.CWD / "solution.png")
             
-            img.save(path)
-            webbrowser.open(path)
-            return
+        #     img.save(path)
+        #     webbrowser.open(path)
+        #     return
 
-        # If this recipe has exceeded the allowed BPP attempts or run out of solutions, move on to the next one
-        if (dvars["params"]["bpp_attempts"] >= args.max_bpp or repeat_solution(dvars["params"]["bpp_assembler_attempts"])):
-            failed_at = None
-            dvars["params"]["recipe_attempts"] += 1
-            dvars["params"]["recipe_assembler_attempts"].append(dvars["recipes"]["assembler_recipes"])
-            dvars["params"]["recipe_inserter_attempts"].append(dvars["recipes"]["inserters"])
+        # # If this recipe has exceeded the allowed BPP attempts or run out of solutions, move on to the next one
+        # if (dvars["params"]["bpp_attempts"] >= args.max_bpp or repeat_solution(dvars["params"]["bpp_assembler_attempts"])):
+        #     failed_at = None
+        #     dvars["params"]["recipe_attempts"] += 1
+        #     dvars["params"]["recipe_assembler_attempts"].append(dvars["recipes"]["assembler_recipes"])
+        #     dvars["params"]["recipe_inserter_attempts"].append(dvars["recipes"]["inserters"])
 
-        # If all valid recipe solutions have been tried, exit early
-        if (repeat_solution(dvars["params"]["recipe_assembler_attempts"]) and repeat_solution(dvars["params"]["recipe_inserter_attempts"])):
-            failed_at = Stages.Recipes
+        # # If all valid recipe solutions have been tried, exit early
+        # if (repeat_solution(dvars["params"]["recipe_assembler_attempts"]) and repeat_solution(dvars["params"]["recipe_inserter_attempts"])):
+        #     failed_at = Stages.Recipes
 
     raise ValueError("Failed to find a solution in the given number of attempts")
 

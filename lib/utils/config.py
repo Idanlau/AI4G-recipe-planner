@@ -7,6 +7,7 @@ class Stages(Enum):
     BinPacking = "BPP",
     Layout     = "Layout"
     
+savilerow_path = "/Users/idanlau/Downloads/savilerow-1.10.1-mac-arm/savilerow"
 
 class Config:
     def __init__(self):
@@ -41,7 +42,7 @@ class Config:
         # Return (success, result) based on whether a solution was found
         def execute(self):
             subprocess.run([
-                "savilerow",
+                savilerow_path,
                 "-run-solver", "-chuffed",
                 "-in-eprime", str(self.EPRIME),
                 "-in-param", str(self.PARAM)

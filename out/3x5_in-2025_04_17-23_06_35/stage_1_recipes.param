@@ -1,0 +1,26 @@
+language ESSENCE' 1.0
+
+$ Bin Size
+letting area = 15
+
+$ Assemblers
+letting max_assemblers = 1
+
+$ Inserters
+letting inserter_rate = 50
+
+$ Items
+letting num_items = 2
+letting inputs = [450,   0]
+letting output = 2
+
+$ Recipes
+letting recipe_qtys = [[0, 0],
+ [2, 1]]
+letting recipe_rates = [  0, 120]
+letting max_rate = 120
+
+$ Previous solutions
+letting num_attempts = 1
+letting assembler_attempts = [[0]]
+letting inserter_attempts = [[0]]

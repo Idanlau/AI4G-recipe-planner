@@ -1,0 +1,7 @@
+language ESSENCE' 1.0
+letting assembler_rates be [50]
+letting assembler_recipes be [2]
+letting consuming be [[100, 0]]
+letting inserters_in be [[2, 0]]
+letting inserters_out be [1]
+letting num_assemblers be 1

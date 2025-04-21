@@ -1,0 +1,18 @@
+language ESSENCE' 1.0
+
+$ Bin Size
+letting binW = 3
+letting binH = 5
+
+$ Layout
+letting num_assemblers = 1
+letting inserters = [3]
+letting reserved = [[1, 0, 1],
+ [0, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0]]
+
+$ Previous solutions
+letting num_attempts = 1
+letting attempts = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]

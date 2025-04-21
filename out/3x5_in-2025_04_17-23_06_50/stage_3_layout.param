@@ -1,0 +1,34 @@
+language ESSENCE' 1.0
+
+$ Bin Size
+letting binW = 3
+letting binH = 5
+
+$ Recipes
+letting num_items = 2
+letting recipes = [[0, 0],
+ [2, 1]]
+
+$ Assemblers and inserters
+letting num_assemblers = 1
+letting assembler_layout = [[0, 0, 0],
+ [0, 0, 0],
+ [1, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0]]
+letting assembler_recipes = [2]
+letting inserters_in = [[2, 0]]
+letting inserters_out = [1]
+
+$ Input/output spaces
+letting inputs = [[1, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0]]
+letting outputs = [[0, 0, 1],
+ [0, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0]]
+letting out_item = 2
